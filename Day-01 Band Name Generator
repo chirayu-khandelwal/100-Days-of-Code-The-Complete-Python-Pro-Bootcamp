@@ -1,4 +1,4 @@
-#1. A greeting is created for the program.
+ #1. A greeting is created for the program.
 print("Welcome to the Band Name Generator \n")
 print("Hello " + input("What is your name ")+'!')
 #2. The user is asked for the city that they grew up in.
