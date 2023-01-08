@@ -9,4 +9,5 @@ pet=input("Enter the name your pet : \n")
 print("Here is suggestion for your band name ~ " + city +' '+ pet )
 print("The length of your 'Band Name' is = " + str(len(city+pet)))
 #5. See the example at:
+
 #   https://replit.com/@chirayu7/Band-Name-Generator#main.py
