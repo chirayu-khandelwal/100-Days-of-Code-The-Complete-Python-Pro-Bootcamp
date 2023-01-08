@@ -10,4 +10,4 @@ message = (f"You have {days} days, {weeks} weeks, and {months}months left" )
 print(message)
 
 #4. See the example at:
-#  https://replit.com/@chirayu7/Day-02-Exercise-03-Time-left?v=1
+#   https://replit.com/@chirayu7/Day-02-Exercise-03-Time-left-for-90-Years?v=1
