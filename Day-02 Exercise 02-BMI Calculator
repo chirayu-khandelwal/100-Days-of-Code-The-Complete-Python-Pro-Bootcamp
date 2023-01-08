@@ -1,0 +1,13 @@
+#1. Inputs are taken of height in meters and weight in kilogram
+height = input("enter your height in m: ")
+weight = input("enter your weight in kg: ")
+#2. Converted to floating datatype
+h = float(height)
+w = float(weight)
+#3. Actual formula is applied to get bmi of a person
+bmi = w // (h**2)
+#4. Print the bmi in floating datatype
+print(f"Your BMI is {bmi}")
+
+#5. See the example at:
+#  https://replit.com/@chirayu7/Day-02-Exercise-02-BMI-Calculator?v=1
