@@ -1,9 +1,0 @@
-#1. Inputs are taken
-two_digit_number = input("Type a two digit number: ")
-#2. Inputs are stored as such if it is in two variables namely (a,b)
-[a,b] = two_digit_number
-#3. Printing of result 
-print(int(a)+int(b))
-
-#4. See the example at:
-#  https://replit.com/@chirayu7/Day-02-Exercise-01?v=1
