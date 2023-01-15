@@ -1,0 +1,11 @@
+#1. Inputs are taken
+number = int(input("Which number do you want to check? "))
+#2. If (number can be divided by 2 with 0 remainder).
+if number % 2 == 0:
+  print("This is an even number.")
+#3. Otherwise (number cannot be divided by 2 with 0 remainder).
+else:
+  print("This is an odd number.")
+
+#4. See the example at:
+#   https://replit.com/@chirayu7/Day-03-Exercise-01-Odd-or-Even?v=1
