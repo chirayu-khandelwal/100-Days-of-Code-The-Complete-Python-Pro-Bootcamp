@@ -1,0 +1,25 @@
+#1. Inputs are taken of height in meters and weight in kilogram
+height = (input("enter your height in m: "))
+weight = (input("enter your weight in kg: "))
+#2. Converted to floating datatype
+h = float(height)
+w = float(weight)
+#3. Actual formula is applied to get bmi of a person
+bmi =round( w / (h**2))
+#4. Print the bmi in floating datatype
+print(f"Your BMI is {bmi}")
+#5. basic if/else,nested if/else and if/elif/else are executed.
+if bmi < 18.5 :
+  print("You are underweight,Eat healthy nutrient-rich food,Do effective workouts as well ")
+elif bmi < 25 :
+  print("You have normal weight but keep Eating healthy food and keep doing workouts")
+elif bmi < 30 :
+  print("You are slightly overweight,Eat some healthy food,Do effective workouts")
+elif bmi < 35 :
+  print("You are obese,Eat some healthy food,Do more workouts")
+elif bmi > 35 :
+  print("You are clinically obese,Eat only healthy food,Do more workouts")
+else : print("Under 18.5 they are underweight, \n Over 18.5 but below 25 they have a normal weight, \nOver 25 but below 30 they are slightly overweight, \n Over 30 but below 35 they are obese, \n Above 35 they are clinically obese.")
+  
+#5. See the example at:
+#   https://replit.com/@chirayu7/Day-03-Exercise-02-BMI-Calculator-20?v=1
