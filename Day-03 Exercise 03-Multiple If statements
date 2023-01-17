@@ -1,0 +1,30 @@
+#1. Greeting is given and Inputs are taken.
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm ? : "))
+bill = 0
+#2. basic if/else,nested if/else and if/elif/else are executed.
+if height >= 120:
+  print("You are welcomed to roller-coaster ride \n tickets for under 12 is ₹100,\n tickets for above 12 and below 18 is ₹150,\n tickets for above 18 is ₹250," )
+  age=int(input("What is your age ? : "))
+#3. Final message is delivered
+  if age <=12:
+    bill=100
+    print("you should pay ₹100. ")
+  elif 12<age<=18:
+    bill=150
+    print("You should pay ₹150. ")
+  else:
+    bill=250
+    print("You should pay ₹250. ")
+#4. Multiple If statement is introduced with f-string
+    
+  want_photo = str(input("Do you wanna capture the memories(photos) say Y or N "))
+  if want_photo == "Y" or "y":
+    bill += 30
+  print(f"Your total bill is ₹{bill}")
+  
+else:
+    print("Sorry gain some centimetrs before to ride.")
+
+#5. See the example at:
+#   https://replit.com/@chirayu7/Day-03-Exercise-03-Multiple-If-statements?v=1
