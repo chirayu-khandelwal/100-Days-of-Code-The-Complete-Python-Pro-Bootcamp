@@ -1,0 +1,17 @@
+#1. Input is taken for year and converted to integer datatype
+year = int(input("Which year do you want to check? :"))
+
+#2. basic nested if/else are executed to get if given year is leap year or not
+if year % 4 == 0  :
+  if year % 100 == 0 :
+    if year % 400 == 0 :
+      print("Given year is leap year")
+    else :
+      print("Given year is not leap year")
+  else :
+    print("Given year is leap year")
+else :
+  print("Given year is not leap year")
+  
+#3. See the example at:
+#   https://replit.com/@chirayu7/Day-03-Exercise-03-Leap-year-checker?v=1
