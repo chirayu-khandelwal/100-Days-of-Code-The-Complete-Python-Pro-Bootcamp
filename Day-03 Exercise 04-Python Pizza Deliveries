@@ -1,0 +1,25 @@
+#1. Greeting is given and Inputs are taken.
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M, or L ")
+add_pepperoni = input("Do you want pepperoni? Y or N ")
+extra_cheese = input("Do you want extra cheese? Y or N ")
+#2. Variable is initialize and if-elif & multiple if statements are used 
+bill = 0
+if size == "S" :
+  bill += 150
+elif size == "M" :
+  bill += 325
+elif size == "L" :
+  bill += 400
+#3. Multiple If statement is introduced with f-string
+if add_pepperoni == "Y" :
+  if size == "S" :
+    bill += 25
+  else:
+    bill += 35
+if extra_cheese == "Y" :
+  bill += 20
+print(f"Your bill is: ₹{bill}.")
+
+#4. See the example at:
+#   https://replit.com/@chirayu7/Day-03-Exercise-04-Python-Pizza-Deliveries?v=1
