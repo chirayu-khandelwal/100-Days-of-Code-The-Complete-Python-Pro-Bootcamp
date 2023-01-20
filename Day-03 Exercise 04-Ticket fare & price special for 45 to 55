@@ -1,0 +1,21 @@
+#1. Greeting is given and Inputs are taken.
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm ? : "))
+#2. basic if/else,nested if/else and if/elif/else are executed.
+if height >= 120:
+  print("You are welcomed to roller-coaster ride \n tickets for under 12 is ₹100,\n tickets for above 12 and below 18 is ₹150,\n tickets for above 18 is ₹250,\n free for all above and between 45 to 55 " )
+  age=int(input("What is your age ? : "))
+#3. Final message is delivered
+  if age <=12:
+    print("you should pay ₹100. ")
+  elif 12>age<=18:
+    print("You should pay ₹150. ")
+  elif age >= 45 and age <= 55 :
+    print("Everything is going well, enjoy a free ride on us.")
+  else:
+    print("You should pay ₹250. ")
+else:
+    print("Sorry gain some centimetrs to ride.")
+
+#4. See the example at:
+#   https://replit.com/@chirayu7/Day-03-Exercise-01-Ticket-fare-price?v=1
