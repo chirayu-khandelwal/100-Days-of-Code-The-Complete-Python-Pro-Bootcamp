@@ -1,0 +1,20 @@
+#1. Greeting is given and Inputs are taken.
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+#2. Variables and conversion are done
+combined_name = str(name1.lower() + name2.lower())
+c = str(name1.lower() + name2.lower())
+first_digit = str(c.count("t") + c.count("r") + c.count("e") + c.count("u"))
+second_digit = str(c.count("l") + c.count("o") + c.count("v") + c.count("e"))
+score = int(first_digit + second_digit)
+#3. if/elif/else statements are executed and result is been printed 
+if (score <= 10) or (score >= 90) :
+  print(f"Your score is {score}, you go together like coke and mentos.")
+elif (score >= 40) and (score <= 50) :
+  print(f"Your score is {score}, you are alright together.")
+else:
+  print(f"Your score is {score}.")
+
+#4. See the example at:
+#   https://replit.com/@chirayu7/Day-03-Exercise-05-Love-Calculator?v=1
