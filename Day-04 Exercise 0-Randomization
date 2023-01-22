@@ -1,0 +1,14 @@
+#1. random module is been called 
+import random
+#2. outputs are printed using random functon
+random_int = random.randint(1,10)
+print(f"Let this be {random_int} random integer.")
+
+random_float = random.random()*5
+print(f"Let this be {random_float} random float between 0 to 5.")
+
+love_score = random.randint(1,100)
+print(f"Your random love score is {love_score}.")
+
+#3. See the example at:
+#   https://replit.com/@chirayu7/Day-04-Exercise-0-Randomization?v=1
