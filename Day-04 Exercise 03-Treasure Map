@@ -17,4 +17,4 @@ map[vertical- 1][horizontal - 1] = " X"
 print(f"{row1}\n{row2}\n{row3}\n{row4}\n{row5}\n{row6}")
 
 #3. See the example at:
-#   https://replit.com/@chirayu7/Day-04-Exercise-3-Treasure-Map?v=1
+#   https://replit.com/@chirayu7/Day-04-Exercise-03-Treasure-Map?v=1
