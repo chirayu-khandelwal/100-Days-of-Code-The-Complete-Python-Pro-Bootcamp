@@ -8,4 +8,4 @@ elif random_coin == 0 :
   print("It's Tails.")
 
 #3. See the example at:
-#   https://replit.com/@chirayu7/Day-04-Exercise-1-Heads-or-Tails?v=1
+#   https://replit.com/@chirayu7/Day-04-Exercise-01-Heads-or-Tails?v=1
