@@ -1,0 +1,18 @@
+#1. random module is been called 
+import random
+#2. Spliting string method is used
+names_string = input("Give me everybody's names, separated by a comma. ")
+names = names_string.split(", ")
+#3. total number of item are calculated 
+num_items = len(names)
+#4. random function is been used with an variable and result is printed 
+random_person = random.randint(0,num_items-1)
+print(names[random_person] + "is going to pay for the meal today! ;)")
+
+#                            OR
+#5. another way of doing in less resources 
+
+print(random.choice(names) + "is going to pay for the meal today! \n:} ")
+
+#6. See the example at:
+#   https://replit.com/@chirayu7/Day-04-Exercise-2-Banker-Roulette-Who-will-pay-the-bill?v=1
