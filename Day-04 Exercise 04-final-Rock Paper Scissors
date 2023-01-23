@@ -1,0 +1,66 @@
+#1. random module is been called and input is taken from user
+import random
+user_choice = int(input("What do you choose ?  Type 0 for rock, 1 for paper, 2 for scissors\n"))
+#2. ASCII coded rock,paper & scissors are called 
+rock_0 = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+paper_0 = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+scissors_0 = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+#3. simple if elif else is applied 
+if user_choice == 0 :
+  print(rock_0 + "\nYou choose rock\n\nComputer chooses:")
+elif user_choice == 1 :
+  print(paper_0 + "\nYou choose paper\n\nComputer chooses:")
+else :
+  print(scissors_0 + "\nYou choose scissors\n\nComputer chooses:")
+#4. random module is applied with simple if elif else
+computer_choice = random.randint(0,2)
+if computer_choice == 0 :
+  print(rock_0 + "\nComputer chooses rock")
+elif computer_choice == 1 :
+  print(paper_0 + "\nComputer chooses paper")
+else :
+  print(scissors_0 + "\nComputer chooses scissors")
+  
+'''com_computer_choice = ["0,0","0,1","0,2","1,0","1,1","1,2","2,0","2,1","2,2"]
+i = "0,0","1,1","2,2"
+j = "0,1","0,2","1,0","1,2","2,0","2,1"
+if com_computer_choice == i :
+  print("It's a draw.")
+else :
+  print("You won")'''
+
+#5. simple if elif else is applied with logical operators
+if user_choice >= 3 or user_choice < 0: 
+  print("\nYou typed an invalid number, you lose!") 
+elif (user_choice == 0 and computer_choice == 2) :
+  print("\nYou win!")
+elif (user_choice == 2 and computer_choice == 0) or (user_choice < computer_choice) :
+  print("\nYou lose!")
+elif (user_choice > computer_choice ) :
+  print("\nYou win!")
+elif computer_choice == user_choice:
+  print("\nIt's a draw")
+
+#6. See the example at:
+#   https://replit.com/@chirayu7/Day-04-Exercise-04-final-Rock-Paper-Scissors?v=1
