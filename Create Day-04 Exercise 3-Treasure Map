@@ -1,0 +1,20 @@
+#inputs are given
+row1 = ["⬜️","️⬜️","️⬜️","⬜️","️⬜️","️⬜️"]
+row2 = ["⬜️","️⬜️","️⬜️","⬜️","️⬜️","️⬜️"]
+row3 = ["⬜️","️⬜️","️⬜️","⬜️","️⬜️","️⬜️"]
+row4 = ["⬜️","️⬜️","️⬜️","⬜️","️⬜️","️⬜️"]
+row5 = ["⬜️","️⬜️","️⬜️","⬜️","️⬜️","️⬜️"]
+row6 = ["⬜️","️⬜️","️⬜️","⬜️","️⬜️","️⬜️"]
+map = [row1, row2, row3,row4,row5,row6]
+print(f"{row1}\n{row2}\n{row3}\n{row4}\n{row5}\n{row6}")
+#2. positions for map are defined 
+position = input("Where do you want to put the treasure? ")
+horizontal = int(position[0])
+vertical = int(position[1])
+#3. inputed changes are applied 
+map[vertical- 1][horizontal - 1] = " X" 
+#4. result is been printed
+print(f"{row1}\n{row2}\n{row3}\n{row4}\n{row5}\n{row6}")
+
+#3. See the example at:
+#   https://replit.com/@chirayu7/Day-04-Exercise-1-Heads-or-Tails?v=1
