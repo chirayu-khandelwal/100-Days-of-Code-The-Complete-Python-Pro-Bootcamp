@@ -7,7 +7,7 @@ for n in range(0, len(student_heights)):
 t_height,t_number = 0,0
 for height in student_heights:
   t_height += height
-print(f"Total heights = {t_height}")
+print(f"Total number of heights = {t_height}")
 for student in student_heights:
   t_number += 1
 print(f"Number of students = {t_number}") 
