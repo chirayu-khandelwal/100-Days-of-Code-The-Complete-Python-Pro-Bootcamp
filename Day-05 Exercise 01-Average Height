@@ -1,0 +1,19 @@
+#1. inputs are been taken and been stored in list
+student_heights = input("Input a list of student heights ").split()
+#2. for loop is applied and number of items are stored in variable 
+for n in range(0, len(student_heights)):
+  student_heights[n] = int(student_heights[n])
+#3. variables are initiated and for loop are applied to optain sum of heights and number of student
+t_height,t_number = 0,0
+for height in student_heights:
+  t_height += height
+print(f"Total heights = {t_height}")
+for student in student_heights:
+  t_number += 1
+print(f"Number of students = {t_number}") 
+#4. result is been printed with using round function
+avg_h = round(t_height/t_number)
+print(avg_h)
+
+#5. See the example at:
+#   https://replit.com/@chirayu7/Day-05-Exercise-01-Average-Height?v=1
