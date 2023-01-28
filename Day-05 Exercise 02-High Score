@@ -1,0 +1,17 @@
+#1. inputs are been taken and been stored in list
+student_scores = input("Input a list of student scores \n").split()
+#2. for loop is applied and number of items are stored in variable 
+for n in range(0, len(student_scores)):
+  student_scores[n] = int(student_scores[n])
+#3. variables are initiated and for loop are applied to optain sum of heights and number of student
+highest_score = 0
+for score in student_scores:
+  highest_score > score
+  highest_score = score
+#4. result is been printed with using round function
+print(f"The highest score is : {highest_score}")
+
+#5. High Score without using max function.
+
+#6. See the example at:
+#   https://replit.com/@chirayu7/Day-05-Exercise-02-High-Score?v=1
