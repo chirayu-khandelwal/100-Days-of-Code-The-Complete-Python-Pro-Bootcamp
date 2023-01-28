@@ -1,3 +1,4 @@
+#1. FizzBuzz problem solution 
 for num in range (1,101):
   
   if (num % 3 == 0) and (num % 5 == 0) :
@@ -8,3 +9,5 @@ for num in range (1,101):
     print ("Buzz")
   else: 
     print(num)
+#6. See the example at:
+#   https://replit.com/@chirayu7/Day-05-Exercise-04-FizzBuzz?v=1
