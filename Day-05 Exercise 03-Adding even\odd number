@@ -1,0 +1,19 @@
+#1. variables are initiated
+total_e,total_o = 0,0
+#2. for loop are applied to optain sum of even and odd number
+for even_num in range(0,101,2):
+  #print(even_num)
+  total_e += even_num
+print(total_e)
+
+#                     OR
+
+#3. for loop are applied to optain sum of even and odd number 
+for odd_num in range(0, 101):
+  if odd_num % 2 != 0:
+     #print(odd_num)
+     total_o += odd_num
+print(total_o)
+
+#6. See the example at:
+#   https://replit.com/@chirayu7/Day-05-Exercise-03-Adding-evenodd-number?v=1
