@@ -14,7 +14,7 @@ def jump():
     while front_is_clear():
         move()
     turn_left()
-#3. While loop is created to check have reached at goal
+#3. While loop is created to check does bot has reached at goal
 while not at_goal():
     if wall_in_front() :
         jump()
