@@ -1,0 +1,48 @@
+import random
+# imports are done from creating module
+from hangman_words import word_list
+from hangman_art import logo
+# random choice function is called
+chosen_word = random.choice(word_list)
+# variables are written in the starting to avoid later confusion
+word_length = len(chosen_word)
+end = False
+lives = 6
+# logo is printed 
+print(logo)
+# testing code
+# print(f'Pssst, the solution is {chosen_word}.')
+# list is created 
+list = []
+# for loop is used to print '_' (blanks) in list
+for _ in range(word_length):
+  list += '_'
+# while loop is created to check whether the cond'n is true
+while not end :
+    # input is in lowercase
+  guess = input("Guess a letter: ").lower()
+  #if condition for saying user that user has already guessed it before correctly 
+  if guess in list :
+    print(f"You have already guessed it before '{guess}'")
+    # for loop is applied with if else statement to replace blank with guessed letter
+  for position in range(word_length):
+    letter = chosen_word[position]
+    if letter == guess:
+      list[position] = letter
+  if guess not in chosen_word:
+      print(f"You guessed {guess},that's wrong letter not in the word. You lose a life.")
+      lives -= 1
+      print(f"You only have {lives} lives out of 6")
+      if lives == 0 :
+       end = True
+       print("YOU LOST")
+  # print for joining the list without {['_']}
+  print(f"{' '.join(list)}")
+  # end statement for while loop as while loop requires internal trigger to stop 
+  if '_' not in list:
+   end = True
+   print("YOU WON")
+  print(stages[lives])
+
+#   See the implementation at:
+#   https://replit.com/@chirayu7/Day-07-Exercise-04-Hangman?v=1
