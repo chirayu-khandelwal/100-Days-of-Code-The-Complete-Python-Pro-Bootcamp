@@ -12,5 +12,5 @@ for word in chosen_word:
   else :
     print("You guessed it wrong ")
 
-#3. See the implementation at:
+#   See the implementation at:
 #   https://replit.com/@chirayu7/Day-07-Exercise-01-Hangman?v=1
