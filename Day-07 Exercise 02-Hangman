@@ -1,0 +1,24 @@
+import random
+word_list = ["aardvark", "baboon", "camel"]
+# random choice function is called
+chosen_word = random.choice(word_list)
+# testing code
+print(f'Pssst, the solution is {chosen_word}.')
+# list is created 
+list = []
+word_length = len(chosen_word)
+# for loop is used to print '_' (blanks) in list
+for _ in range(word_length):
+  list += '_'
+print(list)
+# input is  in lowercase 
+guess = input("Guess a letter: ").lower()
+# for loop is applied with if else statement to replace blank with guessed letter
+for position in range(word_length):
+  letter = chosen_word[position]
+  if letter == guess:
+    list[position] = letter
+print(list)
+
+#3. See the implementation at:
+#   https://replit.com/@chirayu7/Day-07-Exercise-02-Hangman?v=1
