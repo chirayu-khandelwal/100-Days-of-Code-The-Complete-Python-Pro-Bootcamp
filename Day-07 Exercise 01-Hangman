@@ -1,0 +1,16 @@
+# list is created 
+word_list = ["aardvark", "baboon", "camel"]
+# random module is called and random choice function is called
+import random
+chosen_word = random.choice(word_list)
+# input is taken 
+guess = input("Enter the Answer\n").lower()
+# for loop is applied with if else statement
+for word in chosen_word:
+  if word == guess:
+    print("You guessed it right ")
+  else :
+    print("You guessed it wrong ")
+
+#3. See the implementation at:
+#   https://replit.com/@chirayu7/Day-07-Exercise-01-Hangman?v=1
