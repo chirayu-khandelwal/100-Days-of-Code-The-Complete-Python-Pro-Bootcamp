@@ -45,4 +45,4 @@ while not end :
   print(stages[lives])
 
 #   See the implementation at:
-#   https://replit.com/@chirayu7/Day-07-Exercise-04-Hangman?v=1
+#   https://replit.com/@chirayu7/Day-07-Exercise-05-final-Hangman?v=1
