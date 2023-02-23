@@ -20,5 +20,5 @@ for position in range(word_length):
     list[position] = letter
 print(list)
 
-#3. See the implementation at:
+#   See the implementation at:
 #   https://replit.com/@chirayu7/Day-07-Exercise-02-Hangman?v=1
