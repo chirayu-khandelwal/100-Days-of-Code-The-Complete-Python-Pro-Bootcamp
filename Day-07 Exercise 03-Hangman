@@ -29,5 +29,5 @@ while not end :
     end = True
     print("YOU WON")
 
-#3. See the implementation at:
+#   See the implementation at:
 #   https://replit.com/@chirayu7/Day-07-Exercise-03-Hangman?v=1
