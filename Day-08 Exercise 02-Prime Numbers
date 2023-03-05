@@ -1,0 +1,20 @@
+#prime checker function id defined
+def prime_checker(number):
+  #variable is define
+  is_prime_num = True
+  #for loop and 'insided' (if loop) are defined to check whether the number is divisible more than twice 
+  #if it is function variable (is_prime_num) returns the value of false
+  for i in range(2,number):
+    if number % i == 0:
+      is_prime_num = False
+  #if Yes than it will be prime number
+  if is_prime_num :
+    print("It's a prime number.")
+  #otherwise all other number will be non-prime number
+  else:
+    print("It's not a prime number.")
+
+n = int(input("Check this number: "))
+prime_checker(number=n)
+#  See the example at:
+#  https://replit.com/@chirayu7/Day-08-Exercise-02-Prime-Numbers?v=1
