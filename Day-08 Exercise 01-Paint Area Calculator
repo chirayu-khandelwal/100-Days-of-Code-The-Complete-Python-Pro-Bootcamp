@@ -1,0 +1,14 @@
+# imported math lib to perform rounding of digit to greater integer 
+import math
+# function is defined
+def paint_calc(height,width,cover):
+  no_of_cans = math.ceil((height*width)/cover)
+  print(f"You'll need {no_of_cans} cans of paint")
+#inputs are taken
+test_h = int(input("Height of wall: "))
+test_w = int(input("Width of wall: "))
+coverage = 5
+#finally function is called
+paint_calc(height=test_h, width=test_w, cover=coverage)
+#  See the example at:
+#  https://replit.com/@chirayu7/Day-08-Exercise-01-Paint-Area-Calculator?v=1
