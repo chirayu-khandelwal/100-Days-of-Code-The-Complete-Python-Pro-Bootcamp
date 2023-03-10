@@ -22,11 +22,11 @@ def encrypt(given_text,shift_no):
   print(f"The encoded text is '{Cipher_text}'")
 #
 # decrypt function is defined 
-def decrypt(given_text,shift_no):
+def decrypt(generate_text,shift_no):
   # list is created 
   Cipher_text = ""
   # for loop is created to calculate position of word and shifting it by shift_no and by creating new list
-  for letter in given_text:
+  for letter in generate_text:
     # finding the position of word list
     word_position = alphabet.index(letter)
     # shifting the index of word list
@@ -43,7 +43,7 @@ if direction == "encode":
   encrypt(given_text = text,shift_no = shift)
 elif direction == "decode":
   # decrypt function is called 
-  decrypt(given_text = text,shift_no = shift)
+  decrypt(generate_text = text,shift_no = shift)
 else:
   print("Invalid input")
 
