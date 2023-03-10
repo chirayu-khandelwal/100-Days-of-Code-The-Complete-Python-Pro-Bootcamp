@@ -1,0 +1,51 @@
+# extended list is created to ensure that last word is also encrypted
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# inputs are taken from user
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+# encrypt function is defined 
+def encrypt(given_text,shift_no):
+  # list is created 
+  Cipher_text = ""
+  # for loop is created to calculate position of word and shifting it by shift_no and by creating new list
+  for letter in given_text:
+    # finding the position of word list
+    word_position = alphabet.index(letter)
+    # shifting the index of word list
+    new_word_position = word_position + shift_no
+    # creating new index of word list
+    new_letter = alphabet[new_word_position]
+    # creating new word list
+    Cipher_text += new_letter
+  print(f"The encoded text is '{Cipher_text}'")
+#
+# decrypt function is defined 
+def decrypt(given_text,shift_no):
+  # list is created 
+  Cipher_text = ""
+  # for loop is created to calculate position of word and shifting it by shift_no and by creating new list
+  for letter in given_text:
+    # finding the position of word list
+    word_position = alphabet.index(letter)
+    # shifting the index of word list
+    new_word_position = word_position - shift_no
+    # creating new index of word list
+    new_letter = alphabet[new_word_position]
+    # creating new word list
+    Cipher_text += new_letter
+  print(f"The decoded text is '{Cipher_text}'")
+  
+# to get to know whether to encrypt or decrypt 
+if direction == "encode":
+  # encrypt function is called 
+  encrypt(given_text = text,shift_no = shift)
+elif direction == "decode":
+  # decrypt function is called 
+  decrypt(given_text = text,shift_no = shift)
+else:
+  print("Invalid input")
+
+#  See the example at:
+#  https://replit.com/@chirayu7/Day-08-Exercise-03-Caesar-CipherEncrypting-and-Decrypting?v=1
