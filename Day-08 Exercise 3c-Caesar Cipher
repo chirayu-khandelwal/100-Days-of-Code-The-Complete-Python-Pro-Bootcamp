@@ -1,0 +1,28 @@
+# extended list is created to ensure that last word is also encrypted
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# inputs are taken from user
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
+
+# caesar function is defined
+def caesar(start_text,shift_no,coding_direction):
+  # list is created 
+  end_text = ""
+  # if condition is apllied to get to know whether to encrypt or decrypt 
+  if coding_direction == "decode":
+    shift_no *= -1
+  # for loop is created to calculate position of word and shifting it by shift_no and by creating end_text
+  for letter in start_text:
+    # finding the position of word list
+    word_position = alphabet.index(letter)
+    # shifting the index of word list
+    new_word_position = word_position + shift_no
+    # creating new word list
+    end_text += alphabet[new_word_position]
+  print(f"Here's the {direction}d result: {end_text}")
+# caesar function is called
+caesar(start_text = text,shift_no = shift,coding_direction = direction)
+
+#  See the example at:
+#  https://replit.com/@chirayu7/Day-08-Exercise-3c-Caesar-Cipher?v=1
