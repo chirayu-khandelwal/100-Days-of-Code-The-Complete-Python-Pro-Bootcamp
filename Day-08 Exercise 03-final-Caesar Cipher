@@ -1,0 +1,60 @@
+logo = """           
+ ,adPPYba, ,adPPYYba,  ,adPPYba, ,adPPYba, ,adPPYYba, 8b,dPPYba,  
+a8"     "" ""     `Y8 a8P_____88 I8[    "" ""     `Y8 88P'   "Y8  
+8b         ,adPPPPP88 8PP"""""""  `"Y8ba,  ,adPPPPP88 88          
+"8a,   ,aa 88,    ,88 "8b,   ,aa aa    ]8I 88,    ,88 88          
+ `"Ybbd8"' `"8bbdP"Y8  `"Ybbd8"' `"YbbdP"' `"8bbdP"Y8 88   
+            88             88                                 
+           ""             88                                 
+                          88                                 
+ ,adPPYba, 88 8b,dPPYba,  88,dPPYba,   ,adPPYba, 8b,dPPYba,  
+a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8  
+8b         88 88       d8 88       88 8PP""""""" 88          
+"8a,   ,aa 88 88b,   ,a8" 88       88 "8b,   ,aa 88          
+ `"Ybbd8"' 88 88`YbbdP"'  88       88  `"Ybbd8"' 88          
+              88                                             
+              88           
+"""
+# extended list is created to ensure that last word is also encrypted
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+# caesar function is defined
+def caesar(start_text,shift_no,coding_direction):
+  # list is created 
+  end_text = ""
+  # if condition is apllied to get to know whether to encrypt or decrypt 
+  if coding_direction == "decode":
+    shift_no *= -1
+  # for loop is created to calculate position of word and shifting it by shift_no and by creating end_text
+  for char in start_text:
+    if char in alphabet:
+    # finding the position of word list
+      word_position = alphabet.index(char)
+      # shifting the index of word list
+      new_word_position = word_position + shift_no
+      # creating new word list
+      end_text += alphabet[new_word_position]
+    else:
+      end_text += char
+  print(f"Here's the {direction}d result: {end_text}")
+
+# printing caesar caipher logo
+print(logo)
+should_end = False
+while not should_end:
+  
+  # inputs are taken from user
+  direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+  text = input("Type your message:\n").lower()
+  shift = int(input("Type the shift number:\n"))
+  shift %= 26
+
+  # caesar function is called
+  caesar(start_text = text,shift_no = shift,coding_direction = direction)
+  rerun = input("Type 'yes' if you want to go again or type 'no' to stop.\n")
+  if rerun == "no":
+    should_end = True 
+    print("Thank you for using,\nGood bye👋.")
+    
+#  See the example at:
+#  https://replit.com/@chirayu7/Day-08-Exercise-03-final-Caesar-Cipher?v=1
