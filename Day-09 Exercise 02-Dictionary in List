@@ -1,0 +1,27 @@
+# List of travelling 
+travel_log = [
+{
+  "country": "France",
+  "visits": 12,
+  "cities": ["Paris", "Lille", "Dijon"]
+},
+{
+  "country": "Germany",
+  "visits": 5,
+  "cities": ["Berlin", "Hamburg", "Stuttgart"]
+},
+]
+# add_new_country is created by creating empty dictionary and taking arguments from user to add new country
+def add_new_country(country_visited,no_of_visits,visited_cities):
+  new_country = {}
+  new_country["country"] = country_visited
+  new_country["visits"] = no_of_visits
+  new_country["cities"] = visited_cities
+  # Append function is used
+  travel_log.append(new_country)
+# add_new_country is finally been called 
+add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
+print(travel_log)
+
+#  See the example at:
+#  https://replit.com/@chirayu7/Day-09-Exercise-02-Dictionary-in-List?v=1
