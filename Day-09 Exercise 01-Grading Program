@@ -1,0 +1,27 @@
+# Dictionary is created with student and student's score
+student_scores = {
+  "Harry": 81,
+  "Ron": 78,
+  "Hermione": 99, 
+  "Draco": 74,
+  "Neville": 62,
+}
+# Another empty dictionary is created for student's grade
+student_grades = {}
+# for-loop is created to add grades remarks to new empty dictionary 
+for student in student_scores:
+  score = student_scores[student]
+  # if-loop is created to check and add remarks 
+  if score > 90 :
+    student_grades[student] = "Outstanding"
+  elif score > 80 :
+    student_grades[student] = "Exceeds Expectations"
+  elif score > 70 :
+    student_grades[student] = "Acceptable"
+  else :
+    student_grades[student] = "Fail"
+# Finally dictionary is printed 
+print(student_grades)
+
+#  See the example at:
+#  https://replit.com/@chirayu7/Day-09-Exercise-01-Grading-Program?v=1
