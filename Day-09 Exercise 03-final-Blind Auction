@@ -1,0 +1,33 @@
+from replit import clear
+#Art is imported
+from art import logo
+print(logo)
+# bids empty dictionary is created 
+bids = {}
+# highest_bidder function is created and given the input bid_info
+def highest_bidder(bid_info):
+  highest_bid = 0
+  winner = ""
+  # bid_info = {"c": 123, "d": 321, "p": 313, "u": 321}
+  for bidder in bid_info:
+    bid_amount = bid_info[bidder]
+    if  bid_amount > highest_bid :
+      highest_bid = bid_amount
+      winner = bidder
+  print(f"The Winnner for the bidding is {winner},with an Bid Amount of ₹{bid_amount}")
+
+last_bid = False
+while not last_bid:
+  
+  name = input("What is your name? : ")
+  bid = int(input("State the bid price : ₹ "))
+  bids[name] = bid
+  bidding_continue = input("Are there more Biders? ,\nSay yes or no : ")
+  if bidding_continue == "no":
+    last_bid = True
+    highest_bidder(bids)
+  elif bidding_continue ==  "yes":
+    clear() 
+
+#  See the example at:
+#  https://replit.com/@chirayu7/Day-09-Exercise-03-final-Blind-Auction?v=1
