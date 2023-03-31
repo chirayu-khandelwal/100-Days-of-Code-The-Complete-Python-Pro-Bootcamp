@@ -1,0 +1,31 @@
+# is_leap function is defined
+def is_leap(year):
+  # docstrings the above function {is_leap}
+  """Provides the days in Desired Year and Month ,
+  which is inputed."""
+  if year % 4 == 0:
+    if year % 100 == 0:
+      if year % 400 == 0:
+        return True
+      else:
+        return False
+    else:
+      return True
+  else:
+    return False
+# days_in_month function is defined
+def days_in_month(year,month):
+  month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  # if condition is used to check whether the leap year is leap year or not because to return 29 days if it is ,
+  # but if not then return the value of days corresponding to the month - 1 as indexing starts from 0
+  if is_leap(year) and month == 2 :
+    return 29
+  return month_days[month - 1]
+# inputs are taken
+year = int(input("Enter a year: "))
+month = int(input("Enter a month: "))
+days = days_in_month(year, month)
+print(days)
+
+#  See the example at:
+#  https://replit.com/@chirayu7/Day-10-Exercise-01-Days-in-Month?v=1
