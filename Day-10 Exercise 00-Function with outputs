@@ -1,0 +1,10 @@
+def format_name(f_name,l_name):
+  if f_name == "" or l_name == "":
+    return "Please enter valid input!"
+  edited_f_name = f_name.title()
+  edited_l_name = l_name.title()
+  return f"Result: {edited_f_name} {edited_l_name}"
+print(format_name(input("Enter your first name: "),
+                  input("Enter your last name: ")
+                  )
+)
