@@ -1,0 +1,56 @@
+from replit import clear
+from art import logo
+
+# addition
+def add(n1,n2):
+  return n1 + n2
+  # subtraction
+def subtract(n1,n2):
+  return n1 - n2
+  # multiplication 
+def multiply(n1,n2):
+  return n1 * n2
+  # division 
+def divide(n1,n2):
+  return n1 / n2
+#operations are stored in dictionary 
+operations = {
+  "+":add,
+  "-":subtract,
+  "*":multiply,
+  "/":divide
+}
+# calculator function is defined
+def calculator():
+  print(logo)
+  # first num is inputed
+  no1 = float(input("Enter the first number : "))
+  # sign is printe
+  for sign in operations :
+    print(sign)
+  go_next = True
+  # while loop is created to continue calculation
+  while go_next:
+    # sign and second num are inputed
+    operation_sign = input("Enter the sign shown : ")
+    no2 = float(input("Enter the next number : "))
+    cal_function = operations[operation_sign]
+    # calcutions are done using function
+    Answer = cal_function(no1,no2)
+    # answer is printed
+    print(f"{no1} {operation_sign} {no2} = {Answer} ")
+    # if loop is created to continue or to do new calculations 
+    continue_cal = input(f"Type 'y' to continue calculing with {Answer} , 'n' to new calculation and 'e' to exit : ")
+    if continue_cal == "y":
+      no1 = Answer
+    elif continue_cal == "n":
+      go_next = False
+      clear()
+      calculator()
+    else:
+     return "Thanks for using the Calculator"
+# finally calculatorfunction is called
+calculator()
+
+#  See the example at:
+#  https://replit.com/@chirayu7/Day-10-Exercise-02-final-Calculator?v=1
