@@ -1,0 +1,73 @@
+# start the game
+from art import logo, vs
+from game_data import data
+from replit import clear
+
+# create random value to associate with the player's next entry
+import random
+
+# person's data is formated to be able to display 
+def format_data(person):
+  """Used for formating and print the data from source. """
+  person_name = person["name"]
+  person_desc = person["description"]
+  person_country = person["country"]
+  return f"{person_name}, a {person_desc}, from {person_country}"
+
+# Checking is done between user's guess and person's followers count 
+def check_followers(user_guess, person_a_count, person_b_count):
+  """Comparing the two personals' followers count from user's guess and return if it is true """
+  if person_a_count > person_b_count:
+    return user_guess == "a"
+  else:
+    return user_guess == "b"
+
+# The game of Higher_Lower_game is defined
+def Higher_Lower_game():
+  
+  print(logo)
+  
+  score = 0
+  game_continue = True
+  # person_b is definfed before the loop for exchanging person_a with persaon_b 
+  person_b = random.choice(data)
+
+  
+  #making the repeatable
+  while game_continue:
+    person_a = person_b
+    person_b = random.choice(data)
+  # here it is check weather both person are different or not
+    while person_a == person_b:
+      person_b = random.choice(data)
+  
+    print(f" Compair Person A: {format_data(person_a)}.")
+    print(vs)
+    print(f" Against Compair Person B: {format_data(person_b)}.")
+  
+    # takes input
+    user_guess = input(" Who has more followers? Type 'A' or 'B' : ").lower()
+    # follower_count is calculated 
+    person_a_count = person_a["follower_count"]
+    person_b_count = person_b["follower_count"]
+    
+    # is_true stores value for called function chech_followers
+    is_true = check_followers(user_guess, person_a_count, person_b_count)
+    # screen is cleared and again logo is displayed 
+    clear()
+    print(logo)
+    # user's guess is evaluated and score is displayed 
+    if is_true:
+      score += 1
+      print(f"You are Correct, Current Score = {score}.")
+    else:
+      game_continue = False
+      print("Sorry , thats not correct.")
+
+# While loop for repetition of the game
+while input("Do you want to play Higher - Lower? Type 'y' else 'n' ") == "y":
+  clear()
+  Higher_Lower_game()
+  
+#  See the example at:
+#  https://replit.com/@chirayu7/Day-14-final-Higher-Lower?v=1
