@@ -1,5 +1,6 @@
 class MenuItem:
     """Models each Menu Item."""
+
     def __init__(self, name, water, milk, coffee, cost):
         self.name = name
         self.cost = cost
@@ -12,6 +13,7 @@ class MenuItem:
 
 class Menu:
     """Models the Menu with drinks."""
+
     def __init__(self):
         self.menu = [
             MenuItem(name="latte", water=200, milk=150, coffee=24, cost=2.5),

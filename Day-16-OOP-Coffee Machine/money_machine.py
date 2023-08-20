@@ -1,5 +1,4 @@
 class MoneyMachine:
-
     CURRENCY = "$"
 
     COIN_VALUES = {
